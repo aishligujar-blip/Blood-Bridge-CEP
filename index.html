@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bridge | Save Lives</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">🩸 Blood Bridge</a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#find">Find Blood</a>
+                <a href="#register">Become a Donor</a>
+                <a href="#about">About Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">GIVE BLOOD. SHARE HOPE.</p>
+                <h1>Every Drop Can <span>Save a Life.</span></h1>
+                <p class="hero-text">
+                    Blood Bridge connects blood donors with people
+                    who need help. Your small act can make a big difference.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#find" class="btn primary-btn">Find Blood</a>
+                    <a href="#register" class="btn secondary-btn">
+                        Become a Donor
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Blood donation illustration">
+                <div class="heart-circle">🩸</div>
+                <div class="hero-note">
+                    <strong>One donation</strong>
+                    <p>Can help save lives</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="find" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">FIND A DONOR</p>
+                <h2>Find Blood Near You</h2>
+                <p>Choose a blood group and enter a city to find matching demo donors.</p>
+            </div>
+
+            <form id="searchForm" class="search-form">
+                <div class="form-group">
+                    <label for="searchGroup">Blood Group</label>
+                    <select id="searchGroup">
+                        <option value="">All blood groups</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="searchCity">City</label>
+                    <input id="searchCity" type="text"
+                           placeholder="e.g. Pune">
+                </div>
+
+                <button class="btn primary-btn" type="submit">
+                    Search Donors
+                </button>
+                <button class="btn reset-btn" type="button" id="resetSearch">
+                    Reset
+                </button>
+            </form>
+
+            <p id="searchMessage" class="message" aria-live="polite"></p>
+            <div id="donorList" class="donor-grid"></div>
+        </section>
+
+        <section id="register" class="section registration-section">
+            <div class="section-heading">
+                <p class="eyebrow">BE SOMEONE'S HOPE</p>
+                <h2>Become a Blood Donor</h2>
+                <p>Register in our educational demo to see how donor registration works.</p>
+            </div>
+
+            <form id="donorForm" class="donor-form">
+                <div class="form-group">
+                    <label for="donorName">Full Name</label>
+                    <input type="text" id="donorName"
+                           placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="donorGroup">Blood Group</label>
+                    <select id="donorGroup" required>
+                        <option value="">Select blood group</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="donorCity">City</label>
+                    <input type="text" id="donorCity"
+                           placeholder="Enter your city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="donorPhone">Contact Number</label>
+                    <input type="tel" id="donorPhone"
+                           placeholder="10-digit mobile number"
+                           pattern="[6-9][0-9]{9}"
+                           title="Enter a valid 10-digit Indian mobile number"
+                           required>
+                </div>
+
+                <button type="submit" class="btn primary-btn full-width">
+                    Register as Donor
+                </button>
+
+                <p id="registrationMessage" class="message"
+                   aria-live="polite"></p>
+            </form>
+
+            <p class="demo-notice">
+                Demo only: do not enter real personal or medical information.
+            </p>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="section-heading">
+                <p class="eyebrow">ABOUT BLOOD BRIDGE</p>
+                <h2>Connecting People, Saving Lives</h2>
+                <p>
+                    Blood Bridge is a student project designed to demonstrate
+                    how technology can help people discover potential blood donors.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <span>🎯</span>
+                    <h3>Our Mission</h3>
+                    <p>Make blood donor discovery simpler through an accessible interface.</p>
+                </article>
+
+                <article class="about-card">
+                    <span>🤝</span>
+                    <h3>Our Purpose</h3>
+                    <p>Demonstrate donor search, registration and availability features.</p>
+                </article>
+
+                <article class="about-card">
+                    <span>💗</span>
+                    <h3>Our Vision</h3>
+                    <p>Encourage awareness about voluntary blood donation.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">🩸 Blood Bridge</a>
+        <p>Connecting donors. Sharing hope.</p>
+        <p class="footer-disclaimer">
+            Educational prototype only. Donor records are not verified.
+            Not intended for real blood requests or medical emergencies.
+        </p>
+        <p>© 2026 Blood Bridge | CEP Project</p>
+    </footer>
+
+</body>
+</html>
